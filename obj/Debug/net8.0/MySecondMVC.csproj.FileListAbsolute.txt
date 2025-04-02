@@ -28,3 +28,4 @@ C:\Users\minhn\Downloads\MySecondMVC\obj\Debug\net8.0\refint\MySecondMVC.dll
 C:\Users\minhn\Downloads\MySecondMVC\obj\Debug\net8.0\MySecondMVC.pdb
 C:\Users\minhn\Downloads\MySecondMVC\obj\Debug\net8.0\MySecondMVC.genruntimeconfig.cache
 C:\Users\minhn\Downloads\MySecondMVC\obj\Debug\net8.0\ref\MySecondMVC.dll
+C:\Users\minhn\Downloads\MySecondMVC\obj\Debug\net8.0\MySecondMVC.sourcelink.json
