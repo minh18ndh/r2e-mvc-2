@@ -1,7 +1,14 @@
+using MySecondMVC.Repositories;
+using MySecondMVC.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 

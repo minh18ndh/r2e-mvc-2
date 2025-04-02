@@ -1,0 +1,15 @@
+@model List<string>
+@{
+    ViewData["Title"] = "Full Names";
+}
+
+<h2>Full Names of All People</h2>
+
+<ul>
+    @foreach (var name in Model)
+    {
+        <li>@name</li>
+    }
+</ul>
+
+<p><a href="@Url.Action("Index")">Back to List</a></p>

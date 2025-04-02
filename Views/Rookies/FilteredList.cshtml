@@ -1,0 +1,32 @@
+@model List<MySecondMVC.Models.Person>
+@{
+    ViewData["Title"] = "Filtered People";
+}
+
+<h2>Filtered List</h2>
+
+@if (!Model.Any())
+{
+    <p>No matching people found.</p>
+}
+else
+{
+    <table border="1">
+        <tr>
+            <th>Full Name</th>
+            <th>Birth Place</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td><a href="@Url.Action("Details", new { id = person.Id })">@person.FullName</a></td>
+                <td>@person.BirthPlace</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = person.Id })">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+<p><a href="@Url.Action("Index")">Back to List</a></p>

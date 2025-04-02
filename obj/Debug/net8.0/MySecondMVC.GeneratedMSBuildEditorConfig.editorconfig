@@ -9,55 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MySecondMVC
 build_property.RootNamespace = MySecondMVC
-build_property.ProjectDir = C:\Users\minhn\Downloads\MySecondMVC\
+build_property.ProjectDir = C:\Users\minhn\Downloads\r2e-mvc-2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\minhn\Downloads\MySecondMVC
+build_property.MSBuildProjectDirectory = C:\Users\minhn\Downloads\r2e-mvc-2
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Home/Index.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Home/Privacy.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Rookies/Confirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDb25maXJtYXRpb24uY3NodG1s
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Rookies/CreateEdit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDcmVhdGVFZGl0LmNzaHRtbA==
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Rookies/Details.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/DeleteConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGVDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Rookies/Index.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/FilteredList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xGaWx0ZXJlZExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/FullNames.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xGdWxsTmFtZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Shared/Error.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/_ViewImports.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/_ViewStart.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/MySecondMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-r6yp1omkey

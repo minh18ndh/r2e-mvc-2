@@ -1,3 +1,4 @@
+@model List<MySecondMVC.Models.Person>
 @{
     ViewData["Title"] = "Rookies Actions";
 }
@@ -20,6 +21,29 @@
 <br /><br />
 
 <button onclick="location.href='@Url.Action("ExportToExcel", "Rookies")'">Export to Excel</button>
+
+<hr />
+
+<h2>People List</h2>
+<p><a href="@Url.Action("Create")">Create New Person</a></p>
+
+<table border="1">
+    <tr>
+        <th>Full Name</th>
+        <th>Birth Place</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td><a href="@Url.Action("Details", new { id = person.Id })">@person.FullName</a></td>
+            <td>@person.BirthPlace</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = person.Id })">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
 
 <script>
     function filterByYear(filterType) {

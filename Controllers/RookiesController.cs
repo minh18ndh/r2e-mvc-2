@@ -1,73 +1,112 @@
 using Microsoft.AspNetCore.Mvc;
 using MySecondMVC.Models;
+using MySecondMVC.Services;
 
 namespace MySecondMVC.Controllers
 {
     [Route("NashTech/[controller]/[action]")]
     public class RookiesController : Controller
     {
-        private static List<Person> people = new List<Person>
-        {
-            new Person { FirstName = "Minh", LastName = "Nguyen", Gender = "Male", DateOfBirth = new DateOnly(2003, 6, 11), PhoneNumber = "0913234848", BirthPlace = "Vietnam", IsGraduated = true },
-            new Person { FirstName = "Van", LastName = "Vu", Gender = "Female", DateOfBirth = new DateOnly(1999, 7, 15), PhoneNumber = "0494848743", BirthPlace = "Czech", IsGraduated = false },
-            new Person { FirstName = "Toan", LastName = "Le", Gender = "Male", DateOfBirth = new DateOnly(1997, 4, 25), PhoneNumber = "038994384", BirthPlace = "Poland", IsGraduated = false },
-            new Person { FirstName = "Ngoc", LastName = "Tran", Gender = "Female", DateOfBirth = new DateOnly(2000, 11, 6), PhoneNumber = "0138844939", BirthPlace = "Thailand", IsGraduated = true }
-        };
+        private readonly IPersonService _service;
 
-        [HttpGet]
+        public RookiesController(IPersonService service)
+        {
+            _service = service;
+        }
+
         public IActionResult Index()
+        {
+            var people = _service.GetAll();
+            return View(people);
+        }
+
+        public IActionResult Details(Guid id)
+        {
+            var person = _service.GetById(id);
+            if (person == null) return NotFound();
+            return View(person);
+        }
+
+        public IActionResult Create()
         {
             return View();
         }
 
-        [HttpGet]
-        public IActionResult GetMales()
+        [HttpPost]
+        public IActionResult Create(Person person)
         {
-            var males = people.Where(p => p.Gender == "Male").ToList();
-            return Ok(males);
+            if (!ModelState.IsValid) return View(person);
+
+            person.Id = Guid.NewGuid();
+            _service.Add(person);
+            return RedirectToAction("Index");
         }
 
-        [HttpGet]
+        public IActionResult Edit(Guid id)
+        {
+            var person = _service.GetById(id);
+            if (person == null) return NotFound();
+            return View(person);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Person person)
+        {
+            if (!ModelState.IsValid) return View(person);
+
+            _service.Update(person);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(Guid id)
+        {
+            var person = _service.GetById(id);
+            if (person == null) return NotFound();
+            return View(person);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(Guid id)
+        {
+            var person = _service.GetById(id);
+            if (person == null) return NotFound();
+
+            _service.Delete(id);
+            TempData["Message"] = $"Person {person.FullName} was removed from the list successfully!";
+            return RedirectToAction("DeleteConfirmation");
+        }
+
+        public IActionResult DeleteConfirmation()
+        {
+            ViewBag.Message = TempData["Message"];
+            return View();
+        }
+
+        public IActionResult GetMales() => View("FilteredList", _service.GetMales());
+
         public IActionResult GetOldest()
         {
-            var oldest = people.OrderByDescending(p => p.Age).FirstOrDefault();
-            return Ok(oldest);
+            var oldest = _service.GetOldest();
+            return View("Details", oldest);
         }
 
-        [HttpGet]
         public IActionResult GetFullNames()
         {
-            var fullNames = people.Select(p => p.FullName).ToList();
-            return Ok(fullNames);
+            var names = _service.GetFullNames();
+            return View("FullNames", names);
         }
 
-        [HttpGet]
         public IActionResult FilterByBirthYear(int year, string filterType)
         {
-            List<Person> result;
-            switch (filterType)
-            {
-                case "equal":
-                    result = people.Where(p => p.DateOfBirth.Year == year).ToList();
-                    break;
-                case "before":
-                    result = people.Where(p => p.DateOfBirth.Year < year).ToList();
-                    break;
-                case "after":
-                    result = people.Where(p => p.DateOfBirth.Year > year).ToList();
-                    break;
-                default:
-                    return BadRequest("Invalid filterType parameter!");
-            }
-            return Ok(result);
+            var result = _service.FilterByBirthYear(year, filterType);
+            return View("FilteredList", result);
         }
 
-        [HttpGet]
         public IActionResult ExportToExcel()
         {
+            var people = _service.GetAll();
             var csv = "FirstName,LastName,Gender,DateOfBirth,PhoneNumber,BirthPlace,IsGraduated\n" +
                       string.Join("\n", people.Select(p => $"{p.FirstName},{p.LastName},{p.Gender},{p.DateOfBirth:yyyy-MM-dd},{p.PhoneNumber},{p.BirthPlace},{p.IsGraduated}"));
-
             return File(System.Text.Encoding.UTF8.GetBytes(csv), "text/csv", "people.csv");
         }
     }
