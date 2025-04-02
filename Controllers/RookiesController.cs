@@ -14,26 +14,29 @@ namespace MySecondMVC.Controllers
             _service = service;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             var people = _service.GetAll();
             return View(people);
         }
 
-        public IActionResult Details(Guid id)
+        [HttpGet]
+        public IActionResult PersonDetails(Guid id)
         {
             var person = _service.GetById(id);
             if (person == null) return NotFound();
             return View(person);
         }
 
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult CreatePerson()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Person person)
+        public IActionResult CreatePerson(Person person)
         {
             if (!ModelState.IsValid) return View(person);
 
@@ -42,7 +45,8 @@ namespace MySecondMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Edit(Guid id)
+        [HttpGet]
+        public IActionResult EditPerson(Guid id)
         {
             var person = _service.GetById(id);
             if (person == null) return NotFound();
@@ -50,7 +54,7 @@ namespace MySecondMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Person person)
+        public IActionResult EditPerson(Person person)
         {
             if (!ModelState.IsValid) return View(person);
 
@@ -58,7 +62,8 @@ namespace MySecondMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(Guid id)
+        [HttpGet]
+        public IActionResult DeletePerson(Guid id)
         {
             var person = _service.GetById(id);
             if (person == null) return NotFound();
@@ -76,32 +81,38 @@ namespace MySecondMVC.Controllers
             return RedirectToAction("DeleteConfirmation");
         }
 
+        [HttpGet]
         public IActionResult DeleteConfirmation()
         {
             ViewBag.Message = TempData["Message"];
             return View();
         }
 
+        [HttpGet]
         public IActionResult GetMales() => View("FilteredList", _service.GetMales());
 
+        [HttpGet]
         public IActionResult GetOldest()
         {
             var oldest = _service.GetOldest();
-            return View("Details", oldest);
+            return View("PersonDetails", oldest);
         }
 
+        [HttpGet]
         public IActionResult GetFullNames()
         {
             var names = _service.GetFullNames();
             return View("FullNames", names);
         }
 
+        [HttpGet]
         public IActionResult FilterByBirthYear(int year, string filterType)
         {
             var result = _service.FilterByBirthYear(year, filterType);
             return View("FilteredList", result);
         }
 
+        [HttpGet]
         public IActionResult ExportToExcel()
         {
             var people = _service.GetAll();

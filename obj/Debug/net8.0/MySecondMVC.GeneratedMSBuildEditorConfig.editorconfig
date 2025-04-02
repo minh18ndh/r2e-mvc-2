@@ -28,24 +28,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGUuY3NodG1s
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/CreatePerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xDcmVhdGVQZXJzb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/DeleteConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGVDb25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/DeletePerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xEZWxldGVQZXJzb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xFZGl0LmNzaHRtbA==
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/EditPerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xFZGl0UGVyc29uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/FilteredList.cshtml]
@@ -58,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/minhn/Downloads/r2e-mvc-2/Views/Rookies/PersonDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xQZXJzb25EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/minhn/Downloads/r2e-mvc-2/Views/Shared/Error.cshtml]
