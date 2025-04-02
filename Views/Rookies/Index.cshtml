@@ -10,9 +10,9 @@
 
     <div class="card p-3 mb-4">
         <div class="mb-2">
-            <button class="btn btn-primary me-2" onclick="location.href='@Url.Action("GetMales", "Rookies")'">Get Male Members</button>
-            <button class="btn btn-info me-2" onclick="location.href='@Url.Action("GetOldest", "Rookies")'">Get Oldest Member</button>
-            <button class="btn btn-secondary me-2" onclick="location.href='@Url.Action("GetFullNames", "Rookies")'">Get Full Names</button>
+            <button class="btn btn-success" onclick="location.href='@Url.Action("GetMales", "Rookies")'">Get Male Members</button>
+            <button class="btn btn-success" onclick="location.href='@Url.Action("GetOldest", "Rookies")'">Get Oldest Member</button>
+            <button class="btn btn-success" onclick="location.href='@Url.Action("GetFullNames", "Rookies")'">Get Full Names</button>
         </div>
 
         <div class="mb-3">
@@ -20,16 +20,14 @@
             <input type="number" id="year" class="form-control d-inline-block w-auto me-2" value="2000" />
 
             <button class="btn btn-outline-primary me-2" onclick="filterByYear('equal')">Born in Year</button>
-            <button class="btn btn-outline-warning me-2" onclick="filterByYear('before')">Born before Year</button>
-            <button class="btn btn-outline-success" onclick="filterByYear('after')">Born after Year</button>
+            <button class="btn btn-outline-primary me-2" onclick="filterByYear('before')">Born before Year</button>
+            <button class="btn btn-outline-primary me-2" onclick="filterByYear('after')">Born after Year</button>
         </div>
 
         <button class="btn btn-danger" onclick="location.href='@Url.Action("ExportToExcel", "Rookies")'">Export to Excel</button>
     </div>
 
     <h2>People List</h2>
-    <p><a class="btn btn-success" href="@Url.Action("CreatePerson")">+ Create New Person</a></p>
-
     <table class="table table-striped table-bordered">
         <thead class="table-dark">
             <tr>
@@ -53,6 +51,8 @@
             }
         </tbody>
     </table>
+
+    <p><a class="btn btn-success" href="@Url.Action("CreatePerson")">+ Create New Person</a></p>
 </div>
 
 <script>
