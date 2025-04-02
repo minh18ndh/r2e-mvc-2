@@ -1,3 +1,4 @@
+using MySecondMVC.Enums;
 using MySecondMVC.Models;
 using MySecondMVC.Repositories;
 
@@ -14,7 +15,7 @@ namespace MySecondMVC.Services
 
         public List<Person> GetAll() => _repo.GetAll();
 
-        public List<Person> GetMales() => _repo.GetAll().Where(p => p.Gender == "Male").ToList();
+        public List<Person> GetMales() => _repo.GetAll().Where(p => p.Gender == Gender.Male).ToList();
 
         public Person? GetOldest() => _repo.GetAll().OrderByDescending(p => p.Age).FirstOrDefault();
 

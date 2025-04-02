@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Caching.Memory;
 using MySecondMVC.Models;
+using MySecondMVC.Enums;
 
 namespace MySecondMVC.Repositories
 {
@@ -16,10 +17,10 @@ namespace MySecondMVC.Repositories
             {
                 var initialData = new List<Person>
                 {
-                    new Person { FirstName = "Minh", LastName = "Nguyen", Gender = "Male", DateOfBirth = new DateOnly(2003, 6, 11), PhoneNumber = "0913234848", BirthPlace = "Vietnam", IsGraduated = true },
-                    new Person { FirstName = "Van", LastName = "Vu", Gender = "Female", DateOfBirth = new DateOnly(1999, 7, 15), PhoneNumber = "0948487413", BirthPlace = "Czech", IsGraduated = false },
-                    new Person { FirstName = "Toan", LastName = "Le", Gender = "Male", DateOfBirth = new DateOnly(1997, 4, 25), PhoneNumber = "0389943814", BirthPlace = "Poland", IsGraduated = false },
-                    new Person { FirstName = "Ngoc", LastName = "Tran", Gender = "Female", DateOfBirth = new DateOnly(2000, 11, 6), PhoneNumber = "0388449039", BirthPlace = "Thailand", IsGraduated = true }
+                    new Person { FirstName = "Minh", LastName = "Nguyen", Gender = Gender.Male, DateOfBirth = new DateOnly(2003, 6, 11), PhoneNumber = "0913234848", BirthPlace = "Vietnam", IsGraduated = true },
+                    new Person { FirstName = "Van", LastName = "Vu", Gender = Gender.Female, DateOfBirth = new DateOnly(1999, 7, 15), PhoneNumber = "0948487413", BirthPlace = "Czech", IsGraduated = false },
+                    new Person { FirstName = "Toan", LastName = "Le", Gender = Gender.Other, DateOfBirth = new DateOnly(1997, 4, 25), PhoneNumber = "0389943814", BirthPlace = "Poland", IsGraduated = false },
+                    new Person { FirstName = "Ngoc", LastName = "Tran", Gender = Gender.Female, DateOfBirth = new DateOnly(2000, 11, 6), PhoneNumber = "0388449039", BirthPlace = "Thailand", IsGraduated = true }
                 };
 
                 _cache.Set(CacheKey, initialData);

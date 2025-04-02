@@ -1,3 +1,5 @@
+@using MySecondMVC.Enums
+
 @model MySecondMVC.Models.Person
 @{
     ViewData["Title"] = "Create Person";
@@ -23,7 +25,9 @@
 
         <div class="col-md-6">
             <label class="form-label">Gender</label>
-            <input asp-for="Gender" class="form-control" required />
+            <select asp-for="Gender" class="form-select" asp-items="Html.GetEnumSelectList<Gender>()">
+                <option value="">-- Select Gender --</option>
+            </select>
         </div>
 
         <div class="col-md-6">
