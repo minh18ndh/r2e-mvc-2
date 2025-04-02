@@ -13,6 +13,7 @@ namespace MySecondMVC.Repositories
         {
             _cache = cache;
 
+            // Initialize person list in cache if not already set
             if (!_cache.TryGetValue(CacheKey, out List<Person>? _))
             {
                 var initialData = new List<Person>
@@ -20,7 +21,8 @@ namespace MySecondMVC.Repositories
                     new Person { FirstName = "Minh", LastName = "Nguyen", Gender = Gender.Male, DateOfBirth = new DateOnly(2003, 6, 11), PhoneNumber = "0913234848", BirthPlace = "Vietnam", IsGraduated = true },
                     new Person { FirstName = "Van", LastName = "Vu", Gender = Gender.Female, DateOfBirth = new DateOnly(1999, 7, 15), PhoneNumber = "0948487413", BirthPlace = "Czech", IsGraduated = false },
                     new Person { FirstName = "Toan", LastName = "Le", Gender = Gender.Other, DateOfBirth = new DateOnly(1997, 4, 25), PhoneNumber = "0389943814", BirthPlace = "Poland", IsGraduated = false },
-                    new Person { FirstName = "Ngoc", LastName = "Tran", Gender = Gender.Female, DateOfBirth = new DateOnly(2000, 11, 6), PhoneNumber = "0388449039", BirthPlace = "Thailand", IsGraduated = true }
+                    new Person { FirstName = "Ngoc", LastName = "Tran", Gender = Gender.Female, DateOfBirth = new DateOnly(2000, 11, 6), PhoneNumber = "0388449039", BirthPlace = "Thailand", IsGraduated = true },
+                    new Person { FirstName = "Linh", LastName = "Do", Gender = Gender.Male, DateOfBirth = new DateOnly(2005, 3, 1), PhoneNumber = "0912294848", BirthPlace = "Myanmar", IsGraduated = true },
                 };
 
                 _cache.Set(CacheKey, initialData);

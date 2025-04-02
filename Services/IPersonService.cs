@@ -13,5 +13,7 @@ namespace MySecondMVC.Services
         void Add(Person person);
         void Update(Person person);
         void Delete(Guid id);
+        List<Person> GetPaged(int page, int pageSize);
+        int GetTotalCount();
     }
 }
